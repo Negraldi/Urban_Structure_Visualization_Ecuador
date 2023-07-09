@@ -4,8 +4,8 @@ source("UrbanStructureFunctions.R")
 city_name <- "Cuenca"
 canton_code <- "0101"
 pixels_per_degree <- 17026
-continent_file <- "nxprovincias.shp"
-metro_area_file <- "INEC_Area_Metro.gpkg"
+continent_file <- "map_of_ecuador/nxprovincias.shp"
+metro_area_file <- "map_of_ecuador/INEC_Area_Metro.gpkg"
 
 # Read and transform continent data
 continent = continent_file %>%
