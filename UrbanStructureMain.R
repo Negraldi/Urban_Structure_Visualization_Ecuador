@@ -1,11 +1,19 @@
-source("UrbanStructureFunctions.R")
+# Set parameters from command line arguments
+args <- commandArgs(trailingOnly = TRUE)
 
-# Set parameters
-city_name <- "Cuenca"
-canton_code <- "0101"
-pixels_per_degree <- 17026
-continent_file <- "map_of_ecuador/nxprovincias.shp"
-metro_area_file <- "map_of_ecuador/INEC_Area_Metro.gpkg"
+# Verify if all arguments are present
+if(length(args) != 6) {
+    stop("Not all arguments are present. Please provide: city_name, canton_code, pixels_per_degree, continent_file, metro_area_file, functions_script_path.")
+}
+
+city_name <- args[1]
+canton_code <- args[2]
+pixels_per_degree <- as.integer(args[3])
+continent_file <- args[4]
+metro_area_file <- args[5]
+functions_script_path <- args[6]
+
+source(functions_script_path)
 
 # Read and transform continent data
 continent = continent_file %>%
