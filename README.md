@@ -48,6 +48,6 @@ After running the script, a series of `.png` images will be saved to the working
 
 The output of this project are the PNG images that represent the urban structure of the specified area. These images show the street lines, water areas, and islands in different colors according to their characteristics.
 
-![Urban Structure Visualization](CUENCA_1.jpg)
-![Urban Structure Visualization](CUENCA_2.jpg)
-![Urban Structure Visualization](CUENCA_3.jpg)
+![Urban Structure Visualization](outputs/Cuenca_1.png)
+![Urban Structure Visualization](outputs/Cuenca_2.png)
+![Urban Structure Visualization](outputs/Cuenca_3.png)
