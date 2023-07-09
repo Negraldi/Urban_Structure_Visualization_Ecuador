@@ -1,8 +1,18 @@
-# Import necessary libraries
-library(lwgeom)
-library(sf)
-library(osmdata)
-library(dplyr)
+# Install and Import necessary libraries
+# List of packages needed
+packages <- c("lwgeom", "sf", "osmdata", "dplyr")
+
+# Function to check if packages are installed, install them if not
+check_and_install <- function(pkg){
+  if (!require(pkg, character.only = TRUE)){
+    install.packages(pkg, dependencies = TRUE)
+    library(pkg, character.only = TRUE)
+  }
+}
+
+# Use the function to check and install packages
+lapply(packages, check_and_install)
+
 
 # Use spherical geometry (FALSE)
 sf_use_s2(FALSE)
