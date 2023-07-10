@@ -199,7 +199,7 @@ process_coordinates = function(streets) {
 }
 
 # Function to save plot as PNG
-save_plot_as_png = function(city_name, coordinates, points, bbox, continent, water, islands, pixels_per_degree) {
+save_plot_as_png = function(city_name, coordinates, points, bbox, continent, water, islands, pixels_per_degree,...) {
   bbox_coords = st_bbox(bbox)
   
   # Calculate pixel dimensions based on degrees
@@ -234,7 +234,7 @@ save_plot_as_png = function(city_name, coordinates, points, bbox, continent, wat
              island=islands,
              water_color =water_colors[i],
              land_color = land_colors[i]
-    )
+    ,...)
   }
   dev.off()
   
